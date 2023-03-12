@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import SingleProduct from './pages/SingleProduct';
 import Cart from './pages/Cart';
 import ErrorPage from './pages/ErrorPage';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
