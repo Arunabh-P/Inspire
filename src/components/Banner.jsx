@@ -21,7 +21,7 @@ const Banner = () => {
             <img className="d-block w-100" src={m1} alt="First slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">MEN</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">
                 Fashion fades, but style is eternal.
@@ -32,7 +32,7 @@ const Banner = () => {
             <img className="d-block w-100" src={m2} alt="Second slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">MEN</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">Classic never goes out of style.</p>
             </Carousel.Caption>
@@ -41,7 +41,7 @@ const Banner = () => {
             <img className="d-block w-100" src={m3} alt="Third slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">MEN</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">Dress like you're already famous.</p>
             </Carousel.Caption>
@@ -54,7 +54,7 @@ const Banner = () => {
             <img className="d-block w-100" src={w1} alt="First slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">WOMEN</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">
                 Style is a way to say who you are without having to speak.
@@ -65,7 +65,7 @@ const Banner = () => {
             <img className="d-block w-100" src={w2} alt="Second slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">WOMEN</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">
                 Everyday is a fashion show and the world is your runway.
@@ -76,7 +76,7 @@ const Banner = () => {
             <img className="d-block w-100" src={w3} alt="Third slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">WOMEN</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">
                 Fashion is about creating your own identity.
@@ -91,7 +91,7 @@ const Banner = () => {
             <img className="d-block w-100" src={k1} alt="First slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">KID</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">Born to be fashionable.</p>
             </Carousel.Caption>
@@ -100,7 +100,7 @@ const Banner = () => {
             <img className="d-block w-100" src={k2} alt="Second slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">KID</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">Kids fashion, big dreams.</p>
             </Carousel.Caption>
@@ -109,7 +109,7 @@ const Banner = () => {
             <img className="d-block w-100" src={k3} alt="Third slide" />
             <Carousel.Caption>
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">KID</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">Kids today, trendsetters tomorrow.</p>
             </Carousel.Caption>
@@ -122,7 +122,7 @@ const Banner = () => {
             <img className="d-block w-100" src={fw} alt="First slide" />
             <Carousel.Caption className="carousel-text-wrapper">
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">WOMEN</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">
                 Fashion is about creating your own identity.
@@ -133,7 +133,7 @@ const Banner = () => {
             <img className="d-block w-100" src={fk} alt="Second slide" />
             <Carousel.Caption className="carousel-text-wrapper">
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">KID</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">Kids today, trendsetters tomorrow.</p>
             </Carousel.Caption>
@@ -142,7 +142,7 @@ const Banner = () => {
             <img className="d-block w-100" src={fm} alt="Third slide" />
             <Carousel.Caption className="carousel-text-wrapper">
               <h2 className="banner-headline">
-                Inspire <span className="banner-headline-span">MEN</span>{' '}
+                Inspire <span className="banner-headline-span">FASHION</span>{' '}
               </h2>
               <p className="banner-text">Classic never goes out of style.</p>
             </Carousel.Caption>

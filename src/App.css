@@ -6,6 +6,7 @@
   --color-border-greay: #e9e9ed;
   --color-lite-greay: #f8f8fb;
   --color-border-white: #ffff;
+  --color-lite-green: #489d07;
 }
 
 /* header  */
@@ -47,7 +48,7 @@
 .banner-headline {
   font-weight: 400;
   font-family: 'Barlow', sans-serif !important;
-  color: var(--color-main-black);
+  color: #ffff;
 }
 .banner-headline-span {
   color: var(--color-main-red);
@@ -55,7 +56,7 @@
 }
 .banner-text {
   font-family: 'Barlow', sans-serif !important;
-  color: var(--color-main-black);
+  color: #ffff;
 }
 /* banner */
 
@@ -155,8 +156,7 @@ footer {
 /* footer  */
 
 /* feature product */
-.feature-product-wrapper {
-}
+
 .feature-title {
   font-weight: 300;
   color: var(--color-main-black);
@@ -204,6 +204,58 @@ a {
 
 /* card  */
 
+/* page navigation */
+.nav-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-lite-greay);
+  border-radius: 10px;
+}
+.nav-text {
+  margin: 0;
+  padding: 0;
+  color: var(--color-main-black);
+  font-weight: 300;
+}
+.nav-icn {
+  color: var(--color-lite-black);
+  margin: 0px 10px;
+}
+.nav-last-txt {
+  margin: 0;
+  padding: 0;
+  color: var(--color-main-red);
+  font-weight: 300;
+  text-transform: capitalize;
+}
+/* page navigation */
+
+/* single products  */
+.single-product-wrapper {
+  display: flex;
+}
+.single-pdt-img-div {
+  width: 50%;
+}
+.single-pdt-content-div {
+  width: 50%;
+}
+.pdt-single-span-txt {
+  color: var(--color-lite-green);
+  font-weight: 600;
+}
+.sgl-pdt-txt {
+  font-weight: 300;
+  color: var(--color-main-black);
+}
+.sgl-pdt-headline {
+  font-weight: 300;
+  color: var(--color-main-black);
+  text-transform: capitalize;
+}
+/* single products  */
+
 /* media querry */
 @media only screen and (max-width: 990px) {
   .logo-img {
@@ -235,6 +287,15 @@ a {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
+  }
+  .single-product-wrapper {
+    flex-direction: column;
+  }
+  .single-pdt-img-div {
+    width: 100%;
+  }
+  .single-pdt-content-div {
+    width: 100%;
   }
 
   /* change bootstrap styles */

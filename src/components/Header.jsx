@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Image, Container, Nav, Navbar } from 'react-bootstrap';
 import { BsCart2 } from 'react-icons/bs';
+import logo from '../images/logo.png';
 const Header = () => {
   return (
     <Navbar className="navbar-wrapper" collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand>
           <Link className="  " to="/">
-            <Image src="images/logo.png" alt="logo" className="logo-img" />
+            <Image src={logo} alt="logo" className="logo-img" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
