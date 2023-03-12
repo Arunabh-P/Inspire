@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FormatPrice from '../helpers/FormatPrice';
 
 const CardOne = (curElem) => {
   const { id, name, price, image } = curElem;
@@ -12,7 +13,8 @@ const CardOne = (curElem) => {
         ></div>
         <div className="card-content-div">
           <h5 className="card-headline">{name}</h5>
-          <p className="card-price">₹ {price}</p>
+          {/* <p className="card-price">₹ {price}</p> */}
+          <p className="card-price">{<FormatPrice price={price} />}</p>
         </div>
       </div>
     </Link>

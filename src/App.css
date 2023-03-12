@@ -169,13 +169,13 @@ footer {
   justify-content: space-around;
 }
 .card-wrapper {
-  width: 220px;
+  width: 350px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   border-radius: 10px;
   overflow: hidden;
 }
 .card-img-div {
-  width: 220px;
+  width: 350px;
   height: 240px;
   background-position: center;
   background-size: cover;
@@ -189,10 +189,17 @@ footer {
 .card-headline {
   font-weight: 400;
   color: var(--color-main-black);
+  text-decoration: none;
 }
 .card-price {
   font-weight: 300;
   color: var(--color-lite-black);
+  text-decoration: none;
+}
+Link,
+a {
+  text-decoration: none !important;
+  color: var(--color-main-black) !important;
 }
 
 /* card  */
