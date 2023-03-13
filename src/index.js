@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AppProvider } from './context/productContext';
+import { FilterContextProvider } from './context/filterContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <AppProvider>
-    <App />
+    <FilterContextProvider>
+      <App />
+    </FilterContextProvider>
   </AppProvider>
 );

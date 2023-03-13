@@ -13,7 +13,6 @@ const CardOne = (curElem) => {
         ></div>
         <div className="card-content-div">
           <h5 className="card-headline">{name}</h5>
-          {/* <p className="card-price">₹ {price}</p> */}
           <p className="card-price">{<FormatPrice price={price} />}</p>
         </div>
       </div>

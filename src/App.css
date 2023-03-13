@@ -171,7 +171,8 @@ footer {
 }
 .card-wrapper {
   width: 350px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -204,6 +205,57 @@ a {
 }
 
 /* card  */
+
+/* card two  */
+.grid-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card-two-wrapper {
+  width: 220px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.card-two-img-div {
+  width: 220px;
+  height: 240px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img-txt-cat {
+  background-color: var(--color-white);
+  color: var(--color-main-black);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 194px;
+  left: 14px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  max-width: fit-content;
+}
+.card-two-content-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card-two-headline {
+  font-weight: 400;
+  color: var(--color-main-black);
+  text-decoration: none;
+}
+.card-two-price {
+  font-weight: 300;
+  color: var(--color-lite-black);
+  text-decoration: none;
+}
+
+/* card two */
 
 /* page navigation */
 .nav-wrapper {
@@ -340,6 +392,88 @@ a {
   padding-bottom: 5px;
 }
 /* product color section  */
+/* cart quantity */
+.cart-qty-div {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.plus-minus-btn {
+  border: 2px solid var(--color-border-greay);
+  background-color: var(--color-white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  border-radius: 5px;
+}
+.plus-minus-btn:hover {
+  background-color: black;
+  color: var(--color-white);
+}
+.plus-minus-icon {
+  width: 12px;
+}
+.cart-qty-txt {
+  margin: 0px 10px;
+  color: var(--color-lite-black);
+  font-weight: 300;
+}
+/* cart quantity */
+
+/* product page */
+.product-page-wrapper {
+  display: flex;
+}
+.filter-div {
+  width: 20%;
+}
+.product-page-content-div {
+  width: 80%;
+}
+
+/* product page */
+/* list view  */
+.list-wrapper {
+  display: flex;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.list-img-div {
+  width: 25%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.list-txt-cat {
+  background-color: var(--color-white);
+  color: var(--color-main-black);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 14px;
+  left: 14px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  max-width: fit-content;
+}
+.list-content-div {
+  width: 75%;
+  padding: 15px;
+}
+.list-headline {
+  color: var(--color-main-black);
+  font-weight: 500;
+}
+.list-price {
+  color: var(--color-main-black);
+  font-weight: 300;
+}
+.list-txt {
+  color: var(--color-main-black);
+  font-weight: 300;
+}
+/* list view  */
 
 /* media querry */
 @media only screen and (max-width: 1200px) {
@@ -406,6 +540,16 @@ a {
   .big-img {
     margin-bottom: 20px;
   }
+  .list-wrapper {
+    flex-direction: column;
+  }
+  .list-img-div {
+    width: 100%;
+    height: 250px;
+  }
+  .list-content-div {
+    width: 100%;
+  }
 
   /* change bootstrap styles */
   .carousel-caption {
@@ -468,7 +612,36 @@ a {
 }
 
 .buttonOne:hover {
+  background-color: var(--color-white);
+  color: var(--color-main-red);
+  border: 1px solid var(--color-main-red);
+}
+.add-cart-btn {
+  background-color: var(--color-main-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: large;
+  margin-top: 15px;
+}
+.add-cart-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-main-red);
+  border: 1px solid var(--color-main-red);
+}
+.view-btn {
+  background-color: var(--color-white);
+  color: var(--color-main-black);
+  border: 1px solid var(--color-lite-black);
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+}
+.view-btn:hover {
   background-color: var(--color-main-black);
+  color: var(--color-white);
+  border: none;
 }
 /* button  */
 hr {
