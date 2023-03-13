@@ -4,6 +4,7 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
+import logo from '../images/logo.png';
 
 const Footer = () => {
   return (
@@ -38,7 +39,7 @@ const Footer = () => {
           <div className="row mt-3">
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <Link className="  " to="/">
-                <Image src="images/logo.png" alt="logo" className="logo-img" />
+                <Image src={logo} alt="logo" className="logo-img" />
               </Link>
               <p className="footer-txt mt-1">
                 Find high-quality services at every price point.
