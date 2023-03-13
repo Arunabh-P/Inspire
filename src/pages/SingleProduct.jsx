@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import AddToCart from '../components/AddToCart';
 import PageNavigation from '../components/PageNavigation';
 import SingleProductImage from '../components/SingleProductImage';
+import Star from '../components/Star';
 import { useProductContext } from '../context/productContext';
 import FormatPrice from '../helpers/FormatPrice';
 
@@ -44,8 +46,7 @@ const SingleProduct = () => {
             </div>
             <div className="single-pdt-content-div">
               <h2 className="sgl-pdt-headline">{name}</h2>
-              <p className="sgl-pdt-txt">{stars}</p>
-              <p className="sgl-pdt-txt">{reviews} reviews</p>
+              <Star stars={stars} reviews={reviews} />
               <p className="sgl-pdt-txt">
                 MRP :
                 <del>
@@ -66,6 +67,8 @@ const SingleProduct = () => {
                 </span>
               </p>
               <p className="sgl-pdt-txt">ID : {id}</p>
+              <hr />
+              {stock > 0 && <AddToCart product={singleProduct} />}
             </div>
           </div>
         </>
