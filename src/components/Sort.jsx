@@ -38,10 +38,10 @@ const Sort = () => {
               Price (highest)
             </option>
             <option value="a-z" className="option-list">
-              Price (a-z)
+              Sort (a-z)
             </option>
             <option value="z-a" className="option-list">
-              Price (z-a)
+              Sort (z-a)
             </option>
           </select>
         </form>
