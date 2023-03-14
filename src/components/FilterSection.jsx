@@ -1,28 +1,29 @@
 import React from 'react';
 import { useFilterContext } from '../context/filterContext';
+import { FaCheck } from 'react-icons/fa';
 
 const FilterSection = () => {
   const {
-    filters: { text, category },
+    filters: { text, category, color },
     all_products,
     updateFilterValue,
   } = useFilterContext();
 
   // to get unique data of each fields
-  const getUniqueData = (data, property) => {
+  const getUniqueData = (data, attr) => {
     let newVal = data.map((curElem) => {
-      return curElem[property];
+      return curElem[attr];
     });
+    if (attr === 'colors') {
+      // return (newVal = ['all', ...new Set([].concat(...newVal))]);
+      newVal = newVal.flat();
+    }
     return (newVal = ['all', ...new Set(newVal)]);
   };
   // we need unique data
   const categoryOnlyData = getUniqueData(all_products, 'category');
   const companyData = getUniqueData(all_products, 'company');
-  console.log(
-    '🚀 ~ file: FilterSection.jsx:21 ~ FilterSection ~ companyData:',
-    companyData
-  );
-
+  const colorsData = getUniqueData(all_products, 'colors');
   return (
     <div className="fiter-section">
       <div className="filter-search-div">
@@ -73,6 +74,27 @@ const FilterSection = () => {
             ))}
           </select>
         </form>
+      </div>
+      <div className="filter-color-div">
+        <h4 className="filter-headline">Colors</h4>
+        <div className="filter-color-btn-div">
+          {colorsData.map((curColor, index) => (
+            <button
+              key={index}
+              name="color"
+              style={{ backgroundColor: curColor }}
+              className={
+                color === curColor
+                  ? 'filter-color-btn active-color'
+                  : 'filter-color-btn '
+              }
+              value={curColor}
+              onClick={updateFilterValue}
+            >
+              {color === curColor ? <FaCheck className="check-icon" /> : null}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

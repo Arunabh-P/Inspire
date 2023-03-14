@@ -5,7 +5,6 @@ const filterReducer = (state, action) => {
         ...state,
         filter_products: [...action.payload],
         all_products: [...action.payload],
-        // filters: { ...state.filters },
       };
     case 'SET_GRID_VIEW':
       return {
@@ -72,14 +71,19 @@ const filterReducer = (state, action) => {
         });
       }
       if (category !== 'all') {
-        tempFilterProduct = tempFilterProduct.filter((curElem) => {
-          return curElem.category === category;
-        });
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.category === category
+        );
       }
       if (company !== 'all') {
-        tempFilterProduct = tempFilterProduct.filter((curElem) => {
-          return curElem.company.toLowerCase() === company.toLowerCase();
-        });
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
+        );
+      }
+      if (color !== 'all') {
+        tempFilterProduct = tempFilterProduct.filter((curElem) =>
+          curElem.colors.includes(color)
+        );
       }
 
       return {

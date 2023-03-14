@@ -548,6 +548,25 @@ a {
   color: var(--color-white);
   border: none;
 }
+.filter-color-btn-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter-color-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  border: 1px solid var(--color-lite-black);
+  margin-right: 10px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.filter-color-btn:hover {
+  opacity: 1;
+}
+.active-color {
+  opacity: 1;
+}
 /* filter section  */
 
 /* media querry */
