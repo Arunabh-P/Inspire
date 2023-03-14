@@ -3,7 +3,7 @@ import { useFilterContext } from '../context/filterContext';
 import { FaCheck } from 'react-icons/fa';
 import FormatPrice from '../helpers/FormatPrice';
 
-const FilterSection = () => {
+const FilterModal = () => {
   const {
     filters: { text, category, color, price, maxPrice, minPrice },
     updateFilterValue,
@@ -27,7 +27,7 @@ const FilterSection = () => {
   const companyData = getUniqueData(all_products, 'company');
   const colorsData = getUniqueData(all_products, 'colors');
   return (
-    <div className="fiter-section">
+    <div className="fiter-modal-section">
       <div className="filter-search-div">
         <form onSubmit={(e) => e.preventDefault()}>
           <input
@@ -142,4 +142,4 @@ const FilterSection = () => {
   );
 };
 
-export default FilterSection;
+export default FilterModal;

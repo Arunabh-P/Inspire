@@ -1,6 +1,7 @@
 import React from 'react';
-import { BsFillGridFill, BsList } from 'react-icons/bs';
+import { BsFillGridFill, BsList, BsSliders } from 'react-icons/bs';
 import { useFilterContext } from '../context/filterContext';
+import FilterModal from './FilterModal';
 
 const Sort = () => {
   const { filter_products, grid_view, setGridView, setListView, sorting } =
@@ -45,6 +46,29 @@ const Sort = () => {
             </option>
           </select>
         </form>
+      </div>
+      <button
+        className="filter-btn modal-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <BsSliders />
+      </button>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <FilterModal />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
