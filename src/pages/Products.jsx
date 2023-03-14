@@ -6,8 +6,6 @@ import Sort from '../components/Sort';
 import { useFilterContext } from '../context/filterContext';
 
 const Products = () => {
-  // const { filter_products } = useFilterContext();
-
   return (
     <Container>
       <div className="product-page-wrapper">

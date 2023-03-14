@@ -1,6 +1,7 @@
 import React from 'react';
 import { useProductContext } from '../context/productContext';
 import CardOne from './CardOne';
+import Loading from './Loading';
 
 const FeaturedProducts = () => {
   const { isLoading, featuredProducts } = useProductContext();
@@ -9,7 +10,7 @@ const FeaturedProducts = () => {
   return (
     <>
       {isLoading ? (
-        <h1>Loadiing</h1>
+        <Loading />
       ) : (
         <div className="feature-product-wrapper mt-5">
           <h2 className="feature-title mb-4">Exclusive Products</h2>

@@ -846,4 +846,7 @@ input[type='range']:focus {
 input[type='range']:focus::-webkit-slider-runnable-track {
   background: #ccc;
 }
+.loading-img {
+  width: 66px;
+}
 /* input range  custom style */

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import AddToCart from '../components/AddToCart';
+import Loading from '../components/Loading';
 import PageNavigation from '../components/PageNavigation';
 import SingleProductImage from '../components/SingleProductImage';
 import Star from '../components/Star';
@@ -36,7 +37,7 @@ const SingleProduct = () => {
   return (
     <Container>
       {isSingleLoading ? (
-        <h1>Loading</h1>
+        <Loading />
       ) : (
         <>
           <PageNavigation title={name} />
