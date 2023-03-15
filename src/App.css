@@ -575,6 +575,16 @@ a {
   margin-right: 5px;
   margin-bottom: 5px;
 }
+.filter-btn-active {
+  background-color: var(--color-main-black);
+  color: var(--color-white);
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
 .filter-btn:hover {
   background-color: var(--color-main-black);
   color: var(--color-white);
@@ -592,6 +602,7 @@ a {
   margin-right: 10px;
   opacity: 0.6;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 .filter-all-btn {
   border: 1px solid var(--color-lite-black);
@@ -601,6 +612,7 @@ a {
   background-color: var(--color-white);
   color: var(--color-main-black);
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 .filter-all-btn:hover {
   background-color: var(--color-main-black);
