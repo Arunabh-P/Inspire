@@ -5,7 +5,7 @@ import FormatPrice from '../helpers/FormatPrice';
 
 const FilterModal = () => {
   const {
-    filters: { text, category, color, price, maxPrice, minPrice },
+    filters: { text, category, company, color, price, maxPrice, minPrice },
     updateFilterValue,
     all_products,
     clearFilters,
@@ -49,7 +49,9 @@ const FilterModal = () => {
             name="category"
             value={curElem}
             onClick={updateFilterValue}
-            className="filter-btn"
+            className={
+              category === curElem ? 'filter-btn-active' : 'filter-btn '
+            }
           >
             {curElem}
           </button>
@@ -71,6 +73,7 @@ const FilterModal = () => {
                 value={curCompany}
                 name="company"
                 className="option-list"
+                selected={company === curCompany ? true : false}
               >
                 {curCompany}
               </option>
