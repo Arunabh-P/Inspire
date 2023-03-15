@@ -1,10 +1,12 @@
 import React from 'react';
 
 import { MdOutlineDeleteOutline } from 'react-icons/md';
+import { useCartContext } from '../context/cartContext';
 import FormatPrice from '../helpers/FormatPrice';
 import CartAmountToggle from './CartAmountToggle';
 
-const CartItem = ({ name, amount, price, max, image, color }) => {
+const CartItem = ({ id, name, amount, price, max, image, color }) => {
+  const { removeItem } = useCartContext();
   const setDecrease = () => {
     // amount > 1 ? setAmount(amount - 1) : setAmount(1);
   };
@@ -14,6 +16,12 @@ const CartItem = ({ name, amount, price, max, image, color }) => {
   return (
     <>
       <div className="cart-pdt-wrapper">
+        <div className="cart-action-div-small">
+          <MdOutlineDeleteOutline
+            className="cart-delete-icn"
+            onClick={() => removeItem(id)}
+          />
+        </div>
         <div className="cart-img-div">
           <img src={image} className="cart-img" alt="" />
         </div>
@@ -43,7 +51,10 @@ const CartItem = ({ name, amount, price, max, image, color }) => {
           </p>
         </div>
         <div className="cart-action-div">
-          <MdOutlineDeleteOutline className="cart-delete-icn" />
+          <MdOutlineDeleteOutline
+            className="cart-delete-icn"
+            onClick={() => removeItem(id)}
+          />
         </div>
       </div>
     </>
