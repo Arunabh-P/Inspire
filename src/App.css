@@ -764,9 +764,17 @@ a {
   font-weight: 4x00;
 }
 /* cart item  */
+/* not found page  */
+.not-found-img {
+  width: 350px;
+}
+/* not found page  */
 
 /* media querry */
 @media only screen and (max-width: 1200px) {
+  .not-found-img {
+    width: 300px;
+  }
   .filter-search-input {
     width: 150px;
   }
@@ -785,6 +793,9 @@ a {
   }
 }
 @media only screen and (max-width: 990px) {
+  .not-found-img {
+    width: 280px;
+  }
   .cart-pdt-div {
     min-width: fit-content;
   }
@@ -881,6 +892,9 @@ a {
   }
 }
 @media only screen and (max-width: 770px) {
+  .not-found-img {
+    width: 220px;
+  }
   .empty-img {
     width: 180px;
   }

@@ -4,8 +4,10 @@ import { Image, Container, Nav, Navbar } from 'react-bootstrap';
 import { BsCart2 } from 'react-icons/bs';
 import logo from '../images/logo.png';
 import { useCartContext } from '../context/cartContext';
+import { useAuth0 } from '@auth0/auth0-react';
 const Header = () => {
   const { total_item } = useCartContext();
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   return (
     <Navbar className="navbar-wrapper" collapseOnSelect expand="lg">
       <Container>
@@ -31,12 +33,21 @@ const Header = () => {
             <Link className=" nav-links" to="/contact">
               Contact
             </Link>
-            <Link className=" nav-links" to="/login">
-              Login
-            </Link>
-            <Link className=" nav-links" to="/register">
-              Register
-            </Link>
+
+            {isAuthenticated ? (
+              <Link
+                className=" nav-links"
+                onClick={() =>
+                  logout({ logoutParams: { returnTo: window.location.origin } })
+                }
+              >
+                Log Out
+              </Link>
+            ) : (
+              <Link className=" nav-links" onClick={() => loginWithRedirect()}>
+                Login
+              </Link>
+            )}
 
             <Link className=" nav-links " to="/cart">
               <BsCart2 />

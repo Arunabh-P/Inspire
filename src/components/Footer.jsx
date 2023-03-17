@@ -16,20 +16,35 @@ const Footer = () => {
           </span>
         </div>
         <div>
-          <Link to="" className="me-4 link-secondary">
+          <Link
+            to="https://www.facebook.com/Arunabh.CRI"
+            className="me-4 link-secondary"
+          >
             <FaFacebookF className="social-icons" />
           </Link>
-          <Link to="" className="me-4 link-secondary">
+          <Link
+            to="https://twitter.com/Arunabh22477936?t=wiNnJfHif4ndD6AW1_2GIg&s=08"
+            className="me-4 link-secondary"
+          >
             <FaTwitter className="social-icons" />
           </Link>
 
-          <Link to="" className="me-4 link-secondary">
+          <Link
+            to="https://www.instagram.com/arunabh___"
+            className="me-4 link-secondary"
+          >
             <AiFillInstagram className="social-icons" />
           </Link>
-          <Link to="" className="me-4 link-secondary">
+          <Link
+            to="https://www.linkedin.com/in/arunabh-p-498138b3"
+            className="me-4 link-secondary"
+          >
             <BsLinkedin className="social-icons" />
           </Link>
-          <Link to="" className="me-4 link-secondary">
+          <Link
+            to="https://github.com/Arunabh-P"
+            className="me-4 link-secondary"
+          >
             <BsGithub className="social-icons" />
           </Link>
         </div>
@@ -94,6 +109,7 @@ const Footer = () => {
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <h4 className="footer-txt mb-4">Contact</h4>
               <p className="footer-txt">arunabh1995@gmail.com</p>
+              <p className="footer-txt">+ 91 977 822 91 78</p>
               <p className="footer-txt">+ 91 871 436 86 99</p>
             </div>
           </div>
