@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useReducer } from 'react';
 import reducer from '../reducer/cartReducer';
 
 const CartContext = createContext();
-
+// changes is here
 const getLocalCartData = () => {
   let localCartData = localStorage.getItem('inspireCart');
   if (!localCartData) {
