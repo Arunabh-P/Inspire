@@ -6,13 +6,8 @@ import FormatPrice from '../helpers/FormatPrice';
 import CartAmountToggle from './CartAmountToggle';
 
 const CartItem = ({ id, name, amount, price, max, image, color }) => {
-  const { removeItem } = useCartContext();
-  const setDecrease = () => {
-    // amount > 1 ? setAmount(amount - 1) : setAmount(1);
-  };
-  const setIncrease = () => {
-    // amount < stock ? setAmount(amount + 1) : setAmount(stock);
-  };
+  const { removeItem, setDecrement, setIncrement } = useCartContext();
+
   return (
     <>
       <div className="cart-pdt-wrapper">
@@ -41,8 +36,8 @@ const CartItem = ({ id, name, amount, price, max, image, color }) => {
           <div className="cart-pdt-quantity-div mb-3">
             <CartAmountToggle
               amount={amount}
-              setDecrease={setDecrease}
-              setIncrease={setIncrease}
+              setDecrease={() => setDecrement(id)}
+              setIncrease={() => setIncrement(id)}
             />
           </div>
           <p className="cart-pdt-txt">

@@ -29,6 +29,11 @@
 .logo-img {
   width: 140px;
 }
+.cart-count {
+  background-color: var(--color-main-red);
+  padding: 0px 5px;
+  color: var(--color-white);
+}
 /* header  */
 
 /* banner */

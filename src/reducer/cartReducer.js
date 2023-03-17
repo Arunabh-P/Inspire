@@ -1,7 +1,7 @@
 const cartReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_TO_CART':
-      let { id, color, amount, product } = action.payload;
+      let { id, color, amount, product,price } = action.payload;
 
       // tackle the existing product
       let existingProduct = state.cart.find(
@@ -42,7 +42,47 @@ const cartReducer = (state, action) => {
           cart: [...state.cart, cartProduct],
         };
       }
-
+      case 'SET_DECREMENT':
+        let updatedProduct = state.cart.map((curElem) => {
+          if (curElem.id === action.payload) {
+            let decAmount = curElem.amount - 1;
+            if (decAmount <= 1) {
+              decAmount = 1;
+            }
+            return {
+              ...curElem,
+              amount: decAmount,
+            };
+          } else {
+            return curElem;
+          }
+        });
+        return {
+          ...state,
+          cart: updatedProduct,
+        };
+        
+  
+      case 'SET_INCREMENT':
+        let updateIncProduct = state.cart.map((curElem) => {
+          if (curElem.id === action.payload) {
+            let incAmount = curElem.amount + 1;
+            if (incAmount >= curElem.max) {
+              incAmount = curElem.max;
+            }
+            return {
+              ...curElem,
+              amount: incAmount,
+            };
+          } else {
+            return curElem;
+          }
+        });
+        return {
+          ...state,
+          cart: updateIncProduct,
+        };
+  
     case 'REMOVE_ITEM':
       let updatedCart = state.cart.filter(
         (curItem) => curItem.id !== action.payload
@@ -57,6 +97,27 @@ const cartReducer = (state, action) => {
         ...state,
         cart: [],
       };
+      case 'CART_TOTAL_ITEM':
+        let updatedCartProductsQty = state.cart.reduce((initialVal, curElem) => {
+          let { amount } = curElem;
+          initialVal = initialVal + amount;
+          return initialVal;
+        }, 0);
+        return {
+          ...state,
+          total_item: updatedCartProductsQty,
+        };
+  
+        case 'CART_TOTAL_PRICE':
+        let total_price = state.cart.reduce((initialVal,curElem)=>{
+          let {price,amount}=curElem;
+          initialVal=initialVal+price*amount
+          return initialVal
+        },0)  
+        return {
+          ...state,
+          total_price
+        };
 
     default:
       return state;

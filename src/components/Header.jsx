@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { Image, Container, Nav, Navbar } from 'react-bootstrap';
 import { BsCart2 } from 'react-icons/bs';
 import logo from '../images/logo.png';
+import { useCartContext } from '../context/cartContext';
 const Header = () => {
+  const { total_item } = useCartContext();
   return (
     <Navbar className="navbar-wrapper" collapseOnSelect expand="lg">
       <Container>
@@ -22,9 +24,7 @@ const Header = () => {
                   </LinkContainer>
                   <NavDropdown.Item>Logout</NavDropdown.Item>
                 </NavDropdown> */}
-            <Link className=" nav-links" to="/about">
-              About
-            </Link>
+
             <Link className=" nav-links" to="/products">
               Products
             </Link>
@@ -39,7 +39,14 @@ const Header = () => {
             </Link>
 
             <Link className=" nav-links " to="/cart">
-              <BsCart2 /> <span className="cart-count">0</span>
+              <BsCart2 />
+              {total_item ? (
+                <>
+                  <span className="cart-count">{total_item}</span>
+                </>
+              ) : (
+                ''
+              )}
             </Link>
           </Nav>
         </Navbar.Collapse>
