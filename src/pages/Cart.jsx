@@ -6,6 +6,7 @@ import { useCartContext } from '../context/cartContext';
 
 import { IoIosRemoveCircle } from 'react-icons/io';
 import FormatPrice from '../helpers/FormatPrice';
+import CartEmpty from '../components/CartEmpty';
 
 const Cart = () => {
   const { cart, clearCart, total_price, shipping_fee } = useCartContext();
@@ -17,7 +18,7 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <Container>
-        <h3>No Cart in Item </h3>
+        <CartEmpty />
       </Container>
     );
   }

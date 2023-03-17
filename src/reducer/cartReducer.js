@@ -1,16 +1,16 @@
 const cartReducer = (state, action) => {
   switch (action.type) {
-    case "ADD_TO_CART":
-      let { id, color, amount, product, price } = action.payload;
+    case 'ADD_TO_CART':
+      let { id, color, amount, product } = action.payload;
 
       // tackle the existing product
       let existingProduct = state.cart.find(
-        (curItem) => curItem.id == id + color
+        (curItem) => curItem.id === id + color
       );
 
       if (existingProduct) {
         let updatedProduct = state.cart.map((curElem) => {
-          if (curElem.id == id + color) {
+          if (curElem.id === id + color) {
             let newAmount = curElem.amount + amount;
             if (newAmount >= curElem.max) {
               newAmount = curElem.max;
@@ -42,7 +42,7 @@ const cartReducer = (state, action) => {
           cart: [...state.cart, cartProduct],
         };
       }
-    case "SET_DECREMENT":
+    case 'SET_DECREMENT':
       let updatedProduct = state.cart.map((curElem) => {
         if (curElem.id === action.payload) {
           let decAmount = curElem.amount - 1;
@@ -62,7 +62,7 @@ const cartReducer = (state, action) => {
         cart: updatedProduct,
       };
 
-    case "SET_INCREMENT":
+    case 'SET_INCREMENT':
       let updateIncProduct = state.cart.map((curElem) => {
         if (curElem.id === action.payload) {
           let incAmount = curElem.amount + 1;
@@ -82,7 +82,7 @@ const cartReducer = (state, action) => {
         cart: updateIncProduct,
       };
 
-    case "REMOVE_ITEM":
+    case 'REMOVE_ITEM':
       let updatedCart = state.cart.filter(
         (curItem) => curItem.id !== action.payload
       );
@@ -91,7 +91,7 @@ const cartReducer = (state, action) => {
         cart: updatedCart,
       };
 
-    case "CLEAR_CART":
+    case 'CLEAR_CART':
       return {
         ...state,
         cart: [],
@@ -118,7 +118,7 @@ const cartReducer = (state, action) => {
     //     total_price
     //   };
     // simplifying above codes  2 in 1
-    case "CART_ITEM_PRICE_TOTAL":
+    case 'CART_ITEM_PRICE_TOTAL':
       let { total_item, total_price } = state.cart.reduce(
         (accumulator, curElem) => {
           let { price, amount } = curElem;

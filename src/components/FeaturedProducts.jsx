@@ -5,8 +5,6 @@ import Loading from './Loading';
 
 const FeaturedProducts = () => {
   const { isLoading, featuredProducts } = useProductContext();
-  console.log(featuredProducts);
-
   return (
     <>
       {isLoading ? (

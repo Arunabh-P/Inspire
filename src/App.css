@@ -122,7 +122,7 @@
 }
 .contact-title {
   color: var(--color-main-black);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .form-wrapper {
@@ -752,7 +752,17 @@ a {
 .clear-icon:hover {
   color: var(--color-main-black);
 }
-
+.empty-div {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-txt {
+  color: var(--color-main-black);
+  font-weight: 4x00;
+}
 /* cart item  */
 
 /* media querry */
@@ -871,6 +881,9 @@ a {
   }
 }
 @media only screen and (max-width: 770px) {
+  .empty-img {
+    width: 180px;
+  }
   .cart-wrapper-section {
     flex-direction: column-reverse;
   }
