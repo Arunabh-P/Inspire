@@ -5,10 +5,10 @@ import CartItem from '../components/CartItem';
 import { useCartContext } from '../context/cartContext';
 
 import { IoIosRemoveCircle } from 'react-icons/io';
-import FormatPrice from '../helpers/FormatPrice'
+import FormatPrice from '../helpers/FormatPrice';
 
 const Cart = () => {
-  const { cart, clearCart ,total_price,shipping_fee} = useCartContext();
+  const { cart, clearCart, total_price, shipping_fee } = useCartContext();
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
       Clear Cart
@@ -45,20 +45,21 @@ const Cart = () => {
         <div className="cart-det-div">
           <div className="price-details-div">
             <p className="cart-pdt-txt">
-              Subtotal :<span className="cart-txt-span">
-                <FormatPrice price={total_price}/>
+              Subtotal :
+              <span className="cart-txt-span">
+                <FormatPrice price={total_price} />
               </span>
             </p>
             <p className="cart-pdt-txt">
-              Shipping fee :<span className="cart-txt-span">
-                <FormatPrice price={ shipping_fee}/>
-                
-                </span>
+              Shipping fee :
+              <span className="cart-txt-span">
+                <FormatPrice price={shipping_fee} />
+              </span>
             </p>
             <p className="cart-pdt-txt">
-              Grand Total :<span className="cart-txt-span">
-              <FormatPrice price={ shipping_fee+total_price}/>
-                
+              Grand Total :
+              <span className="cart-txt-span">
+                <FormatPrice price={shipping_fee + total_price} />
               </span>
             </p>
             <Link to="#">
