@@ -775,6 +775,10 @@ a {
   .not-found-img {
     width: 300px;
   }
+  .card-wrapper {
+    margin: 15px;
+    max-width: 300px;
+  }
   .filter-search-input {
     width: 150px;
   }
@@ -830,6 +834,7 @@ a {
   }
   .card-wrapper {
     margin-bottom: 15px;
+    max-width: 300px;
   }
   .nav-links {
     padding: 8px;
@@ -948,6 +953,9 @@ a {
   }
 }
 @media only screen and (max-width: 480px) {
+  .card-wrapper {
+    max-width: 260px;
+  }
   .cart-pdt-wrapper {
     flex-direction: column;
     margin-top: 15px;

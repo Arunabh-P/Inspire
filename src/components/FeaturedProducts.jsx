@@ -10,7 +10,7 @@ const FeaturedProducts = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="feature-product-wrapper mt-5">
+        <div className="feature-product-wrapper mt-5 mb-5">
           <h2 className="feature-title mb-4">Exclusive Products</h2>
           <div className="card-div">
             {featuredProducts.map((curElem) => (
